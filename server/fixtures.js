@@ -22,7 +22,7 @@ if (Posts.find().count() === 0) {
 
 	Comments.insert({
 		postId: telescopeId,
-		userId: tomId,
+		userId: tom._id,
 		author: tom.profile.name,
 		submitted: new Date(now - 5 * 3600 * 1000),
 		body: 'Interesting project Sacha, can I get involved?'
