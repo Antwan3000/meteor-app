@@ -1,5 +1,14 @@
-Meteor.publish('posts', function() {
-	return Posts.find();
+Meteor.publish('posts', function(options) {
+	check(options, {
+		sort: Object,
+		limit: Number
+	});
+
+	return Posts.find({}, options);
+
+	// check(sort, Object);
+	// check(limit, Number);
+	// return Posts.find({}, {sort: sort, limit: limit});
 });
 
 Meteor.publish('comments', function(postId) {
@@ -8,5 +17,5 @@ Meteor.publish('comments', function(postId) {
 });
 
 Meteor.publish('notifications', function() {
-	return Notifications.find({userId: this.userId ,read: false});
+	return Notifications.find({userId: this.userId, read: false});
 });
