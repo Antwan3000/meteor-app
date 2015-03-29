@@ -8,9 +8,9 @@ meteor-platform
 mizzao:bootstrap-3
 underscore
 iron:router
-sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
 anti:i18n
 msavin:mongol
 antwan3000:errors
+multiply:iron-router-progress
